@@ -1,40 +1,40 @@
 {
   "prompts": [
     {
-      "id": "code-review",
+      "actionId": "AIAssistant.VCS.GenerateCommitMessage",
+      "name": "Generate Commit Message (Conventional Commits)",
+      "description": "Generate git commit message following Conventional Commits specification",
+      "content": "Write a git commit message following the Conventional Commit specification. The message must be in English and respect the following structure:\n\nBegin with a type from the list: feat, fix, docs, chore, refactor, ci, build, style, perf, or test.\nOptionally include a scope in parentheses, such as api, db, or ui, etc.\nAfter the type and optional scope, add a colon, a space, and a concise subject.\nThe subject should be a short description of the changes made, no longer than 50 characters.\nIf the commit includes a breaking change, add an exclamation mark before the colon, like this: feat(api)!:.\nFollowing the subject, leave a blank line.\nUse bullet points (-) to summarize what has been changed, with each line being a maximum of 100 characters.\nThe message should focus on key points and avoid unnecessary details.\n\nExample message:\nfix(api): resolve CORS issue in production env\n\n- corrected CORS policy to accept custom headers\n- updated middleware to handle preflight requests\n- removed unused CORS library, which caused conflicts\n\nEnsure the message is no more than 100 characters per line and follow the structure provided."
+    },
+    {
+      "actionId": "AIAssistant.WriteDocumentation.Java",
+      "name": "Write Java Documentation",
+      "description": "Generate comprehensive JavaDoc documentation",
+      "content": "Generate comprehensive JavaDoc documentation for this code including:\n- Purpose and functionality\n- @param tags for all parameters\n- @return tag for return values\n- @throws tags for exceptions\n- Usage examples in @code blocks\n- Edge cases and error handling notes\n- Dependencies and requirements"
+    },
+    {
+      "actionId": "llm.testGeneration.java",
+      "name": "Generate Java Unit Tests",
+      "description": "Create JUnit unit tests for Java code",
+      "content": "Generate comprehensive JUnit unit tests for this Java code:\n- Test happy path scenarios\n- Test edge cases and boundary conditions\n- Test error handling and exceptions\n- Use JUnit 5 and appropriate assertions\n- Include @BeforeEach setup if needed\n- Use meaningful test method names\n- Aim for high code coverage"
+    },
+    {
+      "actionId": "AIAssistant.Chat.CustomPrompt",
       "name": "Code Review",
       "description": "Comprehensive code review with best practices",
-      "content": "Please review this code for:\n- Code quality and readability\n- Potential bugs or edge cases\n- Performance optimizations\n- Security vulnerabilities\n- Best practices and design patterns\n- Test coverage suggestions"
+      "content": "Please review this code for:\n- Code quality and readability\n- Potential bugs or edge cases\n- Performance optimizations\n- Security vulnerabilities\n- Best practices and design patterns\n- Test coverage suggestions\n\nProvide specific, actionable feedback."
     },
     {
-      "id": "refactor-suggestion",
+      "actionId": "AIAssistant.RefactorCode",
       "name": "Refactoring Suggestions",
       "description": "Get suggestions for code refactoring",
-      "content": "Analyze this code and suggest refactoring opportunities:\n- Extract methods or classes\n- Reduce complexity\n- Improve naming\n- Remove code duplication\n- Apply design patterns where appropriate"
+      "content": "Analyze this code and suggest refactoring opportunities:\n- Extract methods or classes for better separation of concerns\n- Reduce cyclomatic complexity\n- Improve naming for clarity\n- Remove code duplication (DRY principle)\n- Apply SOLID principles and design patterns where appropriate\n- Suggest more idiomatic code for the language"
     },
     {
-      "id": "documentation",
-      "name": "Generate Documentation",
-      "description": "Create comprehensive documentation for code",
-      "content": "Generate comprehensive documentation for this code including:\n- Purpose and functionality\n- Parameters and return values\n- Usage examples\n- Edge cases and error handling\n- Dependencies and requirements"
-    },
-    {
-      "id": "unit-tests",
-      "name": "Generate Unit Tests",
-      "description": "Create unit tests for the selected code",
-      "content": "Generate comprehensive unit tests for this code:\n- Test happy path scenarios\n- Test edge cases\n- Test error handling\n- Use appropriate test framework\n- Include setup and teardown if needed\n- Aim for high code coverage"
-    },
-    {
-      "id": "explain-code",
+      "actionId": "AIAssistant.ExplainCode",
       "name": "Explain Code",
       "description": "Explain what the code does in simple terms",
-      "content": "Explain this code in simple terms:\n- What does it do?\n- How does it work?\n- What are the key concepts?\n- Are there any tricky parts?\n- What could be improved?"
-    },
-    {
-      "id": "optimize-performance",
-      "name": "Performance Optimization",
-      "description": "Suggest performance improvements",
-      "content": "Analyze this code for performance improvements:\n- Identify bottlenecks\n- Suggest algorithmic improvements\n- Recommend data structure changes\n- Memory optimization opportunities\n- Caching strategies\n- Database query optimizations"
+      "content": "Explain this code in clear, simple terms:\n- What is the primary purpose?\n- How does it work step by step?\n- What are the key concepts or algorithms used?\n- Are there any tricky or non-obvious parts?\n- What are potential gotchas or common mistakes?\n- What could be improved?"
     }
   ]
 }
