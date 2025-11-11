@@ -1,0 +1,40 @@
+{
+  "prompts": [
+    {
+      "id": "code-review",
+      "name": "Code Review",
+      "description": "Comprehensive code review with best practices",
+      "content": "Please review this code for:\n- Code quality and readability\n- Potential bugs or edge cases\n- Performance optimizations\n- Security vulnerabilities\n- Best practices and design patterns\n- Test coverage suggestions"
+    },
+    {
+      "id": "refactor-suggestion",
+      "name": "Refactoring Suggestions",
+      "description": "Get suggestions for code refactoring",
+      "content": "Analyze this code and suggest refactoring opportunities:\n- Extract methods or classes\n- Reduce complexity\n- Improve naming\n- Remove code duplication\n- Apply design patterns where appropriate"
+    },
+    {
+      "id": "documentation",
+      "name": "Generate Documentation",
+      "description": "Create comprehensive documentation for code",
+      "content": "Generate comprehensive documentation for this code including:\n- Purpose and functionality\n- Parameters and return values\n- Usage examples\n- Edge cases and error handling\n- Dependencies and requirements"
+    },
+    {
+      "id": "unit-tests",
+      "name": "Generate Unit Tests",
+      "description": "Create unit tests for the selected code",
+      "content": "Generate comprehensive unit tests for this code:\n- Test happy path scenarios\n- Test edge cases\n- Test error handling\n- Use appropriate test framework\n- Include setup and teardown if needed\n- Aim for high code coverage"
+    },
+    {
+      "id": "explain-code",
+      "name": "Explain Code",
+      "description": "Explain what the code does in simple terms",
+      "content": "Explain this code in simple terms:\n- What does it do?\n- How does it work?\n- What are the key concepts?\n- Are there any tricky parts?\n- What could be improved?"
+    },
+    {
+      "id": "optimize-performance",
+      "name": "Performance Optimization",
+      "description": "Suggest performance improvements",
+      "content": "Analyze this code for performance improvements:\n- Identify bottlenecks\n- Suggest algorithmic improvements\n- Recommend data structure changes\n- Memory optimization opportunities\n- Caching strategies\n- Database query optimizations"
+    }
+  ]
+}
