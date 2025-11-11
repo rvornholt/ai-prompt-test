@@ -1,0 +1,23 @@
+{
+  "prompts": [
+    {
+      "actionId": "AIAssistant.VCS.GenerateCommitMessage",
+      "name": "Generate Commit Message (Conventional Commits)",
+      "description": "Generate git commit message following Conventional Commits specification",
+      "content": "Write a git commit message following the Conventional Commit specification. The message must be in English and respect the following structure:\n\nBegin with a type from the list: feat, fix, docs, chore, refactor, ci, build, style, perf, or test.\nOptionally include a scope in parentheses, such as api, db, or ui, etc.\nAfter the type and optional scope, add a colon, a space, and a concise subject.\nThe subject should be a short description of the changes made, no longer than 50 characters.\nIf the commit includes a breaking change, add an exclamation mark before the colon, like this: feat(api)!:.\nFollowing the subject, leave a blank line.\nUse bullet points (-) to summarize what has been changed, with each line being a maximum of 100 characters.\nThe message should focus on key points and avoid unnecessary details.\n\nExample message:\nfix(api): resolve CORS issue in production env\n\n- corrected CORS policy to accept custom headers\n- updated middleware to handle preflight requests\n- removed unused CORS library, which caused conflicts\n\nEnsure the message is no more than 100 characters per line and follow the structure provided."
+    },
+    {
+      "actionId": "AIAssistant.WriteDocumentation.Java",
+      "name": "Write Java Documentation",
+      "description": "Generate comprehensive JavaDoc documentation",
+      "content": "Generate comprehensive JavaDoc documentation for this code including:\n- Purpose and functionality\n- @param tags for all parameters\n- @return tag for return values\n- @throws tags for exceptions\n- Usage examples in @code blocks\n- Edge cases and error handling notes\n- Dependencies and requirements"
+    },
+    {
+      "actionId": "llm.testGeneration.java",
+      "name": "Generate Java Unit Tests",
+      "description": "Create JUnit unit tests for Java code",
+      "content": "Generate comprehensive JUnit unit tests for this Java code:\n- Test happy path scenarios\n- Test edge cases and boundary conditions\n- Test error handling and exceptions\n- Use JUnit 5 and appropriate assertions\n- Include @BeforeEach setup if needed\n- Use meaningful test method names\n- Aim for high code coverage"
+    }
+  ]
+}
+
