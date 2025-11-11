@@ -17,24 +17,6 @@
       "name": "Generate Java Unit Tests",
       "description": "Create JUnit unit tests for Java code",
       "content": "Generate comprehensive JUnit unit tests for this Java code:\n- Test happy path scenarios\n- Test edge cases and boundary conditions\n- Test error handling and exceptions\n- Use JUnit 5 and appropriate assertions\n- Include @BeforeEach setup if needed\n- Use meaningful test method names\n- Aim for high code coverage"
-    },
-    {
-      "actionId": "AIAssistant.Chat.CustomPrompt",
-      "name": "Code Review",
-      "description": "Comprehensive code review with best practices",
-      "content": "Please review this code for:\n- Code quality and readability\n- Potential bugs or edge cases\n- Performance optimizations\n- Security vulnerabilities\n- Best practices and design patterns\n- Test coverage suggestions\n\nProvide specific, actionable feedback."
-    },
-    {
-      "actionId": "AIAssistant.RefactorCode",
-      "name": "Refactoring Suggestions",
-      "description": "Get suggestions for code refactoring",
-      "content": "Analyze this code and suggest refactoring opportunities:\n- Extract methods or classes for better separation of concerns\n- Reduce cyclomatic complexity\n- Improve naming for clarity\n- Remove code duplication (DRY principle)\n- Apply SOLID principles and design patterns where appropriate\n- Suggest more idiomatic code for the language"
-    },
-    {
-      "actionId": "AIAssistant.ExplainCode",
-      "name": "Explain Code",
-      "description": "Explain what the code does in simple terms",
-      "content": "Explain this code in clear, simple terms:\n- What is the primary purpose?\n- How does it work step by step?\n- What are the key concepts or algorithms used?\n- Are there any tricky or non-obvious parts?\n- What are potential gotchas or common mistakes?\n- What could be improved?"
     }
   ]
 }
