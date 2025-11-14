@@ -4,7 +4,7 @@
       "actionId": "AIAssistant.VCS.GenerateCommitMessage",
       "name": "Generate Commit Message (Conventional Commits)",
       "description": "Generate git commit message following Conventional Commits specification",
-      "content": "Test1"
+      "content": "Please summarize of all selected files and changes for this commit. Please use Conventional Commits specification, and keep the commit line to 100 characters or less."
     },
     {
       "actionId": "AIAssistant.WriteDocumentation.Java",
