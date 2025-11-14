@@ -22,7 +22,7 @@
       "actionId": "llm.testGeneration.kotlin",
       "name": "Generate kotlin Unit Tests",
       "description": "Create JUnit unit tests for kotlin code",
-      "content": "test3"
+      "content": "test4"
     }
   ]
 }
