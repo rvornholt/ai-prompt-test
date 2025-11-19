@@ -4,26 +4,25 @@
       "actionId": "AIAssistant.VCS.GenerateCommitMessage",
       "name": "Generate Commit Message (Conventional Commits)",
       "description": "Generate git commit message following Conventional Commits specification",
-      "content": "Please summarize of all selected files and changes for this commit. Please use Conventional Commits specification, and keep the commit line to 100 characters or less."
+      "content": "Requirements:\n- Use the specification at www.conventionalcommits.org\n- Avoid overly verbose descriptions or unnecessary details\n- Ensure the a line has no more than 100 characters\n- Make use of fix:, feat:, build:, chore:, ci:, docs:, style:, refactor:, perf:, test:\n- fix: and feat: are only to be used, when something changes for the end-user, not for code optimizations.\n- Do not write what has changed in the code try to describe why the change was made (impact), if applicable.\n- Add a footer note `Refs: <issue-number>`. Obtain the issue-number from the branch name. It is often after `fix/` or `/feature` with the format `<project>-<number>`(e.g. CL-123). Branch name: `$GIT_BRANCH_NAME`\n- If there is no issue number in the branch name omit that footer note\n  \nExample:\n```\nfix: prevent racing of requests\n  \nIntroduce a request id and a reference to latest request. Dismiss\nincoming responses other than from latest request.\n  \nRemove timeouts which were used to mitigate the racing issue but are\nobsolete now.\n```\n  \nComply with the following regex: ^((build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\\([\\w-]+\\))?(!)?: ([^A-Z. ]|[^A-Z].*[^. ])|Merge( remote-tracking)? branch.+)$"
     },
     {
       "actionId": "AIAssistant.WriteDocumentation.Java",
       "name": "Write Java Documentation",
       "description": "Generate comprehensive JavaDoc documentation",
-      "content": "test2"
+      "content": "Write JavaDoc comments for the provided Java code.\nRequirements:\n- Follow the Google Java Style Guide for Javadoc formatting and punctuation.\n- Do not include @author, @version, or @since tags.\n- Do not add example usage code.\n- Keep descriptions concise and clear.\n- Use proper HTML tags such as <p>, <ul>, and <li> where appropriate.\n- Document all public classes, methods, constructors, parameters, and return values.\n- For deprecated elements, include an @deprecated tag with a short explanation and recommended alternative.\n- Ensure parameter and return descriptions are full sentences starting with a capital letter and ending with a period.\n- Do not document private fields unless they are constants that require clarification.\n- Ensure a maximum of 100 characters per line"
     },
     {
       "actionId": "llm.testGeneration.java",
       "name": "Generate Java Unit Tests",
       "description": "Create JUnit unit tests for Java code",
-      "content": "test3"
+      "content": "Java Test Generation - Best Practices\n\nGeneriere qualitativ hochwertige Java-Tests nach folgenden Richtlinien:\n\nGrundprinzipien\n- Keine Zufallswerte: Keine Random, UUID.randomUUID(), System.currentTimeMillis()\n- Feste Testdaten: Fixierte IDs (1L, 2L), Namen (\"John Doe\"), Timestamps\n- Deterministisch: Tests müssen wiederholbar sein\n- PMD & Google Checkstyle konform\n- JUnit 5 + AssertJ für Assertions\n- Given-When-Then Struktur\n\n Testtypen\n\n Unit Tests (Standard)\nFür: Business-Logik, Services, Mapper, Utilities\n- `@ExtendWith(MockitoExtension.class)`\n- `@Mock` für Dependencies\n- `@InjectMocks` für Test-Objekt\n- Mockito für Verhalten\n\n Integrationstests\nFür: REST APIs, externe Clients, komplexe DB-Queries\n- `@SpringBootTest` + `@AutoConfigureMockMvc` für Controller\n- `MockWebServer` für externe API Clients\n- `@MockBean` für Service-Layer\n\n Transaktionale Tests\nFür: Datenbank-Tests mit `@Transactional` (Spring)\n\n Code-Qualität\n- Google Java Style Guide\n- Max. 100 Zeichen pro Zeile\n- Aussagekräftige Testnamen: `shouldReturnUser_whenUserExists()`\n- Vollständige Imports und Annotationen\n\n Verboten\nRandom-Werte, UUID.randomUUID(), now() ohne Mock\nTest-Abhängigkeiten untereinander\n@Disabled ohne Begründung"
     },
     {
       "actionId": "llm.testGeneration.kotlin",
       "name": "Generate kotlin Unit Tests",
       "description": "Create JUnit unit tests for kotlin code",
-      "content": "test3"
+      "content": " Kotlin Test Generation - Best Practices\n\nGeneriere qualitativ hochwertige Kotlin-Tests nach folgenden Richtlinien:\n\n Grundprinzipien\n- Keine Zufallswerte: Keine Random, UUID.randomUUID(), System.currentTimeMillis()\n- Feste Testdaten: Fixierte IDs (1L, 2L), Namen (\"John Doe\"), Timestamps\n- Deterministisch: Tests müssen wiederholbar sein\n- ktlint konform\n- JUnit 5 + AssertJ oder Kotest\n- Given-When-Then Struktur\n- Backtick-Testnamen für Lesbarkeit\n\n Testtypen\n\n Unit Tests (Standard)\nFür: Business-Logik, Services, Mapper, Utilities\n- MockK bevorzugt (idiomatischer als Mockito)\n- `@MockK` für Dependencies\n- `@InjectMocks` für Test-Objekt\n- Backtick-Namen: `` `should return user when user exists` ``\n\n Integrationstests\nFür: REST APIs, externe Clients, komplexe DB-Queries\n- `@SpringBootTest` + `@AutoConfigureMockMvc` für Controller\n- `MockWebServer` für externe API Clients\n- `@MockBean` für Service-Layer\n\n Transaktionale Tests\nFür: Datenbank-Tests mit `@Transactional` (Spring)\n\n Kotlin-Spezifisches\n- Data Classes für Testdaten\n- Named Arguments für Klarheit\n- MockK statt Mockito\n- Kotest als JUnit-Alternative möglich\n- Keine `!!` (null assertion) - sichere Alternativen nutzen\n\n Code-Qualität\n- ktlint Style Guide\n- Max. 120 Zeichen pro Zeile\n- Aussagekräftige Backtick-Testnamen\n- Vollständige Imports\n\n Verboten\nRandom-Werte, UUID.randomUUID(), now() ohne Mock\nTest-Abhängigkeiten untereinander\n@Disabled ohne Begründung\nNull assertions (`!!`) in Tests"
     }
   ]
 }
-
